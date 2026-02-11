@@ -19,10 +19,10 @@
     }
   ],
   "links": {
-    "support": "https://www.reportingxpress.com/support",
-    "documentation": "https://www.reportingxpress.com/cihub",
-    "privacy": "https://www.reportingxpress.com/privacy",
-    "terms": "https://www.reportingxpress.com/terms"
+    "support": "https://www.reportingxpress.com",
+    "documentation": "https://www.reportingxpress.com",
+    "privacy": "https://www.reportingxpress.com",
+    "terms": "https://www.reportingxpress.com"
   }
 }
 ```
