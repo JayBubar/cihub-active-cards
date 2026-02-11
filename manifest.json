@@ -1,0 +1,60 @@
+{
+  "name": "CI Hub Analytics Portal",
+  "description": "Quick access to CI Hub donor intelligence and analytics",
+  "version": "1.0.0",
+  "publisher": "Reporting Xpress",
+  "author": "Reporting Xpress",
+  "applicationId": "YOUR-BLACKBAUD-APP-ID-HERE",
+  "icon": "https://USERNAME.github.io/cihub-active-cards/cihub-icon.png",
+  "cards": [
+    {
+      "id": "cihub-home-portal",
+      "title": "CI Hub Analytics",
+      "description": "Launch your donor intelligence dashboard",
+      "contextRecordType": "None",
+      "placement": "Dashboard",
+      "size": "Small",
+      "url": "https://USERNAME.github.io/cihub-active-cards/home-card.html",
+      "icon": "https://USERNAME.github.io/cihub-active-cards/cihub-icon-small.png"
+    }
+  ],
+  "links": {
+    "support": "https://www.reportingxpress.com/support",
+    "documentation": "https://www.reportingxpress.com/cihub",
+    "privacy": "https://www.reportingxpress.com/privacy",
+    "terms": "https://www.reportingxpress.com/terms"
+  }
+}
+```
+
+4. **Commit the file**
+
+---
+
+### **Step 4: Enable GitHub Pages**
+
+1. **In your repository, click "Settings"** (top right)
+
+2. **Scroll down to "Pages"** (in left sidebar)
+
+3. **Under "Source":**
+   - Select **"Deploy from a branch"**
+   - **Branch:** Select `main` (or `master`)
+   - **Folder:** Select `/ (root)`
+   - Click **"Save"**
+
+4. **Wait 1-2 minutes** for GitHub to deploy
+
+5. **Your site will be live at:**
+```
+   https://YOUR-GITHUB-USERNAME.github.io/cihub-active-cards/
+```
+
+---
+
+### **Step 5: Test Your URLs**
+
+After GitHub Pages deploys, test these URLs in your browser:
+```
+https://YOUR-GITHUB-USERNAME.github.io/cihub-active-cards/home-card.html
+https://YOUR-GITHUB-USERNAME.github.io/cihub-active-cards/manifest.json
