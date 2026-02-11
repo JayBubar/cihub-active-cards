@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "publisher": "Reporting Xpress",
   "author": "Reporting Xpress",
-  "applicationId": "YOUR-BLACKBAUD-APP-ID-HERE",
-  "icon": "https://USERNAME.github.io/cihub-active-cards/cihub-icon.png",
+  "applicationId": "c04625ab-a3b7-4aaa-816c-456ffa51f885",
+  "icon": "https://jaybubar/cihub-active-cards/cihub-icon.png",
   "cards": [
     {
       "id": "cihub-home-portal",
@@ -14,8 +14,8 @@
       "contextRecordType": "None",
       "placement": "Dashboard",
       "size": "Small",
-      "url": "https://USERNAME.github.io/cihub-active-cards/home-card.html",
-      "icon": "https://USERNAME.github.io/cihub-active-cards/cihub-icon-small.png"
+      "url": "https://jaybubar/cihub-active-cards/home-card.html",
+      "icon": "https://jaybubar/cihub-active-cards/cihub-icon-small.png"
     }
   ],
   "links": {
