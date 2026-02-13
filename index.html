@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CI Hub - High Potential Prospects</title>
+    <script src="https://sky.blackbaudcdn.net/static/sky-addin-client/1/sky-addin-client.umd.min.js"></script>
+    <style>
+        body { margin: 0; padding: 15px; font-family: "Segoe UI", Arial, sans-serif; background: #ffffff; }
+        .header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; border-bottom: 1px solid #e2e1e1; padding-bottom: 10px; }
+        .header img { width: 40px; }
+        h2 { font-size: 16px; color: #0076ad; margin: 0; }
+        
+        .prospect-list { list-style: none; padding: 0; margin: 0 0 15px 0; }
+        .prospect-row { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 8px 0; 
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 13px;
+        }
+        .prospect-name { font-weight: 600; color: #333; }
+        .prospect-gift { color: #666; }
+
+        .cta-btn {
+            display: block;
+            background: #0076ad;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="logo.png" alt="CI Hub">
+        <h2>Top 5 High Potential Prospects</h2>
+    </div>
+
+    <div id="list-container">
+        <ul class="prospect-list" id="prospect-list">
+            <li class="prospect-row">Loading nightly intelligence...</li>
+        </ul>
+    </div>
+
+    <a href="https://demo.reportingxpress.org/ReportExplorer" target="_blank" class="cta-btn">
+        View Full Analysis in CI Hub
+    </a>
+
+    <script>
+        (function() {
+            const client = new BBSkyAddinClient.AddinClient({
+                callbacks: {
+                    init: (args) => {
+                        args.ready({ showUI: true, title: 'CI Hub Intelligence' });
+                        fetchData();
+                    }
+                }
+            });
+
+            async function fetchData() {
+                try {
+                    // Replace with your actual GitHub Pages URL to the JSON file
+                    const response = await fetch('top-prospects.json');
+                    const data = await response.json();
+                    renderList(data);
+                } catch (err) {
+                    document.getElementById('prospect-list').innerHTML = "<li>Error loading prospects.</li>";
+                }
+            }
+
+            function renderList(donors) {
+                const list = document.getElementById('prospect-list');
+                list.innerHTML = ''; // Clear loading message
+                
+                donors.forEach(donor => {
+                    const li = document.createElement('li');
+                    li.className = 'prospect-row';
+                    li.innerHTML = `
+                        <span class="prospect-name">${donor.name}</span>
+                        <span class="prospect-gift">Last Gift: ${donor.lastGift}</span>
+                    `;
+                    list.appendChild(li);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
